@@ -2,15 +2,13 @@
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
     "strict": true,
+    "baseUrl": ".",                             // 🔑 Required for "paths" to work
     "paths": {
-      "@/*": [
-        "./*"
-      ]
+      "@/*": ["app/*"]                          // ✅ Helps with auto-imports from your `app/` folder
     }
   },
   "include": [
-    "**/*.ts",
-    "**/*.tsx",
+    "app",                                      // ✅ Target only your `app/` folder
     ".expo/types/**/*.ts",
     "expo-env.d.ts"
   ]
