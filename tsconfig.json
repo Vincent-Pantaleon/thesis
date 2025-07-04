@@ -5,11 +5,12 @@
     "baseUrl": ".",                             // 🔑 Required for "paths" to work
     "paths": {
       "@/*": ["app/*"]                          // ✅ Helps with auto-imports from your `app/` folder
-    }
+    },
   },
   "include": [
     "app",                                      // ✅ Target only your `app/` folder
     ".expo/types/**/*.ts",
-    "expo-env.d.ts"
+    "expo-env.d.ts",
+    "env.d.ts",
   ]
 }
